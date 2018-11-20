@@ -1,0 +1,24 @@
+{
+  "name": "cdsbarrera.github.io",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdsbarrera/cdsbarrera.github.io.git"
+  },
+  "keywords": [
+    "cv"
+  ],
+  "author": "@cdsbarrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdsbarrera/cdsbarrera.github.io/issues"
+  },
+  "homepage": "https://github.com/cdsbarrera/cdsbarrera.github.io#readme"
+}
