@@ -1,0 +1,34 @@
+$my-gray: #F8F7FF;
+$my-red: #95190C;
+$my-blue: #1B5299;
+$my-black: #011627;
+$my-yellow: #E3B505;
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.full-height {
+    min-height: 100vh;
+}
+
+.parallax {
+    /* The image used 
+    background-image: url("img_parallax.jpg");
+    */
+    
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-header {
+    background-image: url("../images/landscape-1.jpg");
+}
