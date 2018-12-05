@@ -3,17 +3,26 @@ $my-red: #95190C;
 $my-blue: #1B5299;
 $my-black: #011627;
 $my-yellow: #E3B505;
-
+$my-gold: #bf9b30;
+$my-green: #3B952A;
+$my-turquesa: #007E8B;
+$my-white: #FCFFFC;
 
 body {
     margin: 0;
     padding: 0;
 }
 
+// Heights
 .full-height {
     min-height: 100vh;
 }
 
+.half-height {
+    min-height: 50vh;
+}
+
+// Parallax
 .parallax {
     /* The image used 
     background-image: url("img_parallax.jpg");
@@ -29,6 +38,71 @@ body {
     background-size: cover;
 }
 
+// Sections
+#my-header {
+    background: $my-white;
+    overflow: visible;
+}
+
 .bg-header {
     background-image: url("../images/landscape-1.jpg");
+}
+
+#my-who-i-am {
+    background-color: $my-white;
+}
+
+// Background Animation
+// https://codepen.io/Mamboleoo/pen/BxMQYQ
+
+.background {
+    //width: 100vw;
+    //height: 100vh;
+    background: $my-white;
+}
+
+$particleSize: 8vmin;
+$animationDuration: 6s;
+$amount: 20;
+
+.background span {
+  width: $particleSize;
+  height: $particleSize;
+  border-radius: $particleSize;
+  backface-visibility: visible;
+  position: fixed;
+  animation-name: move;
+  animation-duration: $animationDuration;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  white-space: nowrap;
+  opacity: 0.5;
+  $colors: (
+    //#267899,
+    //#B12B0A,
+    $my-turquesa,
+    $my-green,
+    $my-gold,
+    //#E07212
+  );
+  @for $i from 1 through $amount {
+    &:nth-child(#{$i}) {
+      color: nth($colors, random(length($colors)));
+      top: random(100) * 1%;
+      left: random(100) * 1%;
+      animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
+      animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
+      transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
+      $blurRadius: (random() + 0.5) * $particleSize * 0.25;
+      $blurRadius: 0.1*$particleSize;
+      $x: if(random() > 0.5, -1, 1);
+      box-shadow: ($particleSize * 2 * $x) 0 $blurRadius currentColor;
+    }
+  }
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
 }
