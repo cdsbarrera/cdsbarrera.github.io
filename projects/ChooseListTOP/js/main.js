@@ -1,11 +1,12 @@
 /*
  * main.js
  */
-let btnStart, btnDone, txtareaList, btnOpt1, btnOpt2
+let btnStart, btnDone, txtareaList, btnOpt1, btnOpt2, btnAgain
 const title_btnStart = "button-start";
 const title_btnDone = "button-done";
 const title_btnOpt1 = "label1";
 const title_btnOpt2 = "label2";
+const title_btnAgain = "button-again";
 const title_txtareaItemlist = "item-list";
 const title_classNone = "d-none";
 let contHome, contChoose, contList, toplist, progressBar
@@ -179,6 +180,9 @@ function generateOptions() {
     }
 }
 
+function startAgain() {
+    window.location.href = "../index.html";
+}
 // ------------------------------
 // Join Buttons
 // ------------------------------
@@ -189,6 +193,7 @@ btnDone = document.getElementById(title_btnDone)
 txtareaList = document.getElementById(title_txtareaItemlist)
 btnOpt1 = document.getElementById(title_btnOpt1)
 btnOpt2 = document.getElementById(title_btnOpt2)
+btnAgain = document.getElementById(title_btnAgain)
 toplist = document.getElementById(title_top_list)
 progressBar = document.getElementById(title_progress)
 
@@ -201,3 +206,4 @@ btnStart.addEventListener("click", generateOptions)
 btnDone.addEventListener("click", determinateTOP)
 btnOpt1.addEventListener("click", nextOption)
 btnOpt2.addEventListener("click", nextOption)
+btnOpt2.addEventListener("click", startAgain)
