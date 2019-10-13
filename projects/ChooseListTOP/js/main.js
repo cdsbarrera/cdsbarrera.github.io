@@ -181,7 +181,7 @@ function generateOptions() {
 }
 
 function startAgain() {
-    window.location.href = "../index.html";
+    transitionMode(contList,contHome)
 }
 // ------------------------------
 // Join Buttons
@@ -206,4 +206,4 @@ btnStart.addEventListener("click", generateOptions)
 btnDone.addEventListener("click", determinateTOP)
 btnOpt1.addEventListener("click", nextOption)
 btnOpt2.addEventListener("click", nextOption)
-btnOpt2.addEventListener("click", startAgain)
+btnAgain.addEventListener("click", startAgain)
