@@ -1,0 +1,15 @@
+.btn {
+    width: 200px;
+}
+
+.options {
+    height: 150px;
+}
+
+#rowOptions {
+    height: 200px;
+}
+
+.customAnimation {
+    animation-duration: 2s;
+}
