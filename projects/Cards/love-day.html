@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia de Amor y Amistad</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5e6e8;
+            font-family: 'Tahoma', 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .card {
+            position: relative;
+            width: 500px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 30px;
+            z-index: 2;
+            opacity: 90%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .heart {
+            font-size: 50px;
+            color: red;
+            animation: beat 1s infinite;
+        }
+
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .message {
+            position: relative;
+            font-size: 1.25em;
+            padding: 20px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .animated-heart {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: floatUp 3s ease-in-out infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                bottom: -20px;
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                bottom: -50%;
+                opacity: 0;
+            }
+        }
+
+        .background {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(45deg, #ffafbd, #ffc3a0);
+            z-index: 1;
+            animation: gradient 5s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .floating-hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .floating-hearts span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: red;
+            clip-path: polygon(50% 0%, 100% 30%, 100% 75%, 50% 100%, 0% 75%, 0% 30%);
+            animation: float 8s infinite ease-in-out;
+            opacity: 0.7;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Randomly position and animate hearts */
+        .floating-hearts span:nth-child(1) {
+            left: 20%;
+            animation-duration: 7s;
+            animation-delay: 0s;
+        }
+
+        .floating-hearts span:nth-child(2) {
+            left: 40%;
+            animation-duration: 9s;
+            animation-delay: 2s;
+        }
+
+        .floating-hearts span:nth-child(3) {
+            left: 60%;
+            animation-duration: 6s;
+            animation-delay: 1s;
+        }
+
+        .floating-hearts span:nth-child(4) {
+            left: 80%;
+            animation-duration: 8s;
+            animation-delay: 3s;
+        }
+
+        .floating-hearts span:nth-child(5) {
+            left: 50%;
+            animation-duration: 10s;
+            animation-delay: 4s;
+        }
+
+        .floating-hearts span:nth-child(6) {
+            left: 33%;
+            animation-duration: 10s;
+            animation-delay: 3ms;
+        }
+
+        .floating-hearts span:nth-child(7) {
+            left: 77%;
+            animation-duration: 15s;
+            animation-delay: 1s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="floating-hearts">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="card">
+        <div class="heart">❤️</div>
+        <div class="message">
+            <p>Mi querida Sofi</p>
+            <p>
+                Aunque estemos lejos, quiero que sepas que no hay distancia que pueda apagar lo que siento por ti. Cada día que pasa pienso en lo afortunado que soy de tenerte en mi vida, y aunque no podamos estar juntos físicamente ahora, nuestra conexión sigue siendo fuerte. Tu sonrisa, tus palabras y cada pequeño gesto me llegan al corazón, sin importar los kilómetros que nos separen.
+            </p>
+            <p>
+            Pronto estaré a tu lado, y la espera habrá valido la pena. No pasa un día sin que imagine el momento de verte y abrazarte nuevamente. Hasta entonces, quiero que sepas cuánto te quiero y lo emocionado que estoy por todo lo que compartimos, incluso a la distancia.
+            </p>
+            <p>
+            Con Amor, Cris
+            </p>
+        </div>
+    </div>
+    <div class="animated-heart">❤️</div>
+</body>
+</html>
